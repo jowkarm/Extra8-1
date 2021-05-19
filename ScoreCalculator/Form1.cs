@@ -22,8 +22,10 @@ namespace ScoreCalculator
             InitializeComponent();
         }
 
-        int total = 0;
+        // The array is declared.
+        int[] scoresArray = new int[10];
         int count = 0;
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -33,8 +35,18 @@ namespace ScoreCalculator
                 {
                     int score = Convert.ToInt32(txtScore.Text);
 
-                    total += score;
+                    //The array gets the scores for each count number.
+                    scoresArray[count] = score;
                     count += 1;
+
+                    // The total variable changed to a local variable.
+                    int total = 0;
+
+                    // A foreach loop is added.
+                    foreach (int i in scoresArray)
+                    {
+                        total += i;
+                    }
                     int average = total / count;
 
                     txtScoreTotal.Text = total.ToString();
@@ -54,7 +66,9 @@ namespace ScoreCalculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            total = 0;
+
+            // The current array is replaced with an empty array.
+            scoresArray = new int[10]; 
             count = 0;
 
             txtScore.Text = "";
@@ -117,6 +131,28 @@ namespace ScoreCalculator
                 return false;
             }
             return true;
+        }
+
+
+        //The new method for the Display button. 
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            string allScores = "";
+
+            //The array is sorted.
+            Array.Sort(scoresArray);
+
+            //This loop shows all the scores in a message box.
+            foreach (int i in scoresArray) 
+            {
+                if (i != 0)
+                {
+                    allScores += i.ToString() + "\n";
+                }
+            }
+                
+            MessageBox.Show(allScores, "Sorted Scores:");
+            txtScore.Focus();
         }
     }
 }

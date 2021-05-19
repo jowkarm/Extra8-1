@@ -39,6 +39,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnDisplay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +56,7 @@
             // txtScore
             // 
             this.txtScore.Location = new System.Drawing.Point(108, 23);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(2);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(49, 23);
             this.txtScore.TabIndex = 0;
@@ -74,7 +75,7 @@
             // txtScoreTotal
             // 
             this.txtScoreTotal.Location = new System.Drawing.Point(108, 52);
-            this.txtScoreTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtScoreTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtScoreTotal.Name = "txtScoreTotal";
             this.txtScoreTotal.ReadOnly = true;
             this.txtScoreTotal.Size = new System.Drawing.Size(49, 23);
@@ -94,7 +95,7 @@
             // txtScoreCount
             // 
             this.txtScoreCount.Location = new System.Drawing.Point(108, 80);
-            this.txtScoreCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtScoreCount.Margin = new System.Windows.Forms.Padding(2);
             this.txtScoreCount.Name = "txtScoreCount";
             this.txtScoreCount.ReadOnly = true;
             this.txtScoreCount.Size = new System.Drawing.Size(49, 23);
@@ -114,7 +115,7 @@
             // txtAverage
             // 
             this.txtAverage.Location = new System.Drawing.Point(108, 109);
-            this.txtAverage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAverage.Margin = new System.Windows.Forms.Padding(2);
             this.txtAverage.Name = "txtAverage";
             this.txtAverage.ReadOnly = true;
             this.txtAverage.Size = new System.Drawing.Size(49, 23);
@@ -124,7 +125,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(178, 22);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 25);
             this.btnAdd.TabIndex = 1;
@@ -134,8 +135,8 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(77, 142);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(178, 148);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(78, 25);
             this.btnClear.TabIndex = 2;
@@ -145,8 +146,8 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(178, 142);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Location = new System.Drawing.Point(178, 207);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(78, 25);
             this.btnExit.TabIndex = 3;
@@ -154,13 +155,24 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnDisplay
+            // 
+            this.btnDisplay.Location = new System.Drawing.Point(53, 148);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(104, 25);
+            this.btnDisplay.TabIndex = 8;
+            this.btnDisplay.Text = "&Display Scores";
+            this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(288, 185);
+            this.ClientSize = new System.Drawing.Size(288, 243);
+            this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
@@ -172,7 +184,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Score Calculator";
@@ -194,6 +206,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnDisplay;
     }
 }
 
